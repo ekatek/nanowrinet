@@ -1,0 +1,3 @@
+# nanowrinet
+
+NaNoWriMo autocompleter
