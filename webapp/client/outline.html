@@ -1,0 +1,38 @@
+<head>
+  <title>NaNoWriNet</title>
+</head>
+
+<body>
+  {{> outline}}
+</body>
+
+
+<template name="outline">
+  <div class="header">
+    <h2> {{pageTitle}} </h2>
+ </div>
+ {{#if done}}
+  {{> showText}}
+ {{else}}
+  {{> inputForm}}
+ {{/if}}
+</template>
+
+
+<template name="inputForm">
+  <div class="main">
+    <div class="item"> {{> explanation}} </div>
+    <div class="item">  {{> usertitle}}  </div>
+    <div class="item"> {{> upload}} </div>
+    <div class="item"> {{> mixin}} </div>
+    <div class="item"> {{> tryit}} </div>
+  </div>
+</template>
+
+<template name="showText">
+  <div class="main">
+     <div class="item"> <div class="goback">  &#8810; back  </div> </div>
+    <div class="item"> {{> result}} </div>
+     <div class="item"> <div class="goback right">  &#8810; try again </div> </div>
+  </div>
+</template>

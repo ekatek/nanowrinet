@@ -1,0 +1,67 @@
+
+<!-- Explanation of what NaNoWriNet is -->
+<template name="explanation">
+<img src="meme.png" class="meme" >
+<p>NaNoWriMo can be very draining. It is incredibly frustrating to be less than 10 000 words away from finishing... before being swamped by work and Thanksgiving relatives and college reunions and explaining the plot to the internet and, also, webcomics. You got so far, though. Don't stop now! All this progress has got to count for something...</p>
+
+{{{details}}}
+
+</template>
+
+
+<!--  Widget to upload the file -->
+<template name="upload">
+Text is what we make in the month of November. Submit some plaintext here! <br>
+<div class="selection mixin">
+  <input id="upload" type="file" class="selection-text fluid mixin"/>
+</div>
+{{#if wordcount}}
+... just a checkpoint, really, but you have uploaded a work of about {{wordcount}} words...and it ended with:
+<div class="selection"> <div class="selection-text"> {{lastWords}} </div> </div>
+{{else}}
+  {{#if invalid}}
+... something has gone terribly wrong, and we can't read the file. Please try again!
+  {{/if}}
+{{/if}}
+</template>
+
+
+<!-- Widget to select the mixin -->
+<template name="mixin">
+Choose the underlying base -- which of these authors/works has influenced you the most? <br>
+{{#each mixins}}
+  <div class="selection mixin {{checked}}" id="{{_id}}">
+    <div class="selection-text">
+       <span class="checkbox {{checked}}"></span> {{authorAndTitle}}
+    </div>
+  </div>
+{{/each}}
+</template>
+
+
+<!-- Widget to select the title -->
+<template name="usertitle">
+  What's the title? <br>
+  <div class="selection"> <input id="usertitle" type="text" class="selection-text"/> </div>
+</template>
+
+
+<!-- Widget to call the server method -->
+<template name="tryit">
+  {{#if waiting}}
+   <div class="button button-not-ready waiting">
+     You have been waiting for server for {{timer}} seconds. <br>
+     This should not take more than 90.
+   </div>
+ {{else}}
+   <div class="button {{ready}}">  Give me 1000 words! </div>
+ {{/if}}
+</template>
+
+
+<!-- Widget to show the result -->
+<template name="result">
+<div class="result">
+  <p> {{{result}}} </p>
+</div>
+</template>

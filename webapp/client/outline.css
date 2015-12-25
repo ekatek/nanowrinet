@@ -1,0 +1,49 @@
+/* Main outline CSS */
+body {
+    font-family:  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+.main {
+    background-color: #fff;
+    padding-left: 3em;
+    padding-right: 3em;
+    padding-top: 4em;
+    padding-bottom: 1em;
+    margin: 0 auto;
+    width: 75em;
+    border-bottom-right-radius: 0.15em;
+    border-bottom-left-radius: 0.15em;
+    border-right: 1px solid #eee;
+    border-left: 1px solid #eee;
+
+    height:100vh;
+}
+
+.header {
+    color: #fff;
+    background-color: #004499;
+    margin: 0 auto;
+    height: 4.3em;
+    top: 0;
+    position: fixed;
+    width: 100%;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    padding-left: 3em;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Back button */
+.goback {
+    border: 1px solid gray;
+    cursor: pointer;
+    padding: 0.5em;
+    border-radius: 0.15em;
+}
+
+.goback:hover {
+  background-color: #eee
+}
+
+.goback.right {
+  border: 1px solid #585;
+}
