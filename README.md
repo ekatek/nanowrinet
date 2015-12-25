@@ -62,4 +62,3 @@ The webapp is a small UI that calls up the AWS Lambda functions on the server. Y
 You can deploy it for free with:
 
 `meteor deploy --settings <settings.json> <domain-name>.meteor.com`
->>>>>>> init
