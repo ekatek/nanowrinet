@@ -1,0 +1,50 @@
+{
+  "public": {
+    "mode": "net"
+  },
+  "aws": {
+    "key": "XXXXX",
+    "secret": "XXXXX",
+    "region": "us-east-1"
+   },
+   "net-mixins": {
+     "a": {
+       "author": "James Joyce",
+       "author-token": "joyce",
+       "lambda-name": "joyce-net",
+       "title": "Ulysses"
+      },
+     "b": {
+       "author": "Elizabeth Gilbert",
+       "author-token": "gilbert",
+       "lambda-name": "gilbert-net",
+       "title": "Eat, Pray, Love"
+      },
+     "c": {
+       "author": "JRR Tolkien",
+       "author-token": "tolkien",
+       "lambda-name": "tolkien-net",
+       "title": "Lord Of The Rings"
+      }
+   },
+   "markov-mixins": {
+     "a": {
+       "author": "James Joyce",
+       "title": "Ulysses",
+       "filename": "joyce"
+      },
+     "b": {
+       "author": "Elizabeth Gilbert",
+       "title": "Eat, Pray, Love",
+       "filename": "gilbert"
+      },
+     "c": {
+       "author": "JRR Tolkien",
+       "title": "Lord Of The Rings",
+       "filename": "tolkien"
+      },
+     "d": {
+       "author": ""
+     }
+   }
+}
